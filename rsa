@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+
+# library to get arguments
+import sys
+
+
+# fn unpack number factorial
+def fc():
+    try:
+        r = sys.argv[1]
+        with open(r) as f:
+            for rn in f:
+                rn = int(rn)
+                if rn % 2 == 0:
+                        print("{}={}*{}".format(rn, rn // 2, 2))
+                        continue
+                i = 3
+                while i < rn // 2:
+                    if rn % i == 0:
+                        print("{}={}*{}".format(rn, rn // i, i))
+                        break
+                    i = i + 2
+                if i == (rn // 2) + 1:
+                    print("{}={}*{}".format(rn, rn, 1))
+    except (IndexError):
+        pass
+
+
+# autostart
+fc()
