@@ -5,14 +5,14 @@ from sys import argv
 def factorize(value):
     x = 2
 
-    if v < 2:
+    if value < 2:
         return
     print()
-    print(v, "<- value-bef")
-    while v % x:
+    print(value, "<- value-bef")
+    while value % x:
         x += 1
-    print("{:.0f}={:.0f}*{:.0f}".format(v, v / x, x))
-    print(v, "<- v-aft")
+    print("{:.0f}={:.0f}*{:.0f}".format(value, value / x, x))
+    print(value, "<- value-aft")
     print()
 
 if len(argv) != 2:
@@ -20,11 +20,11 @@ if len(argv) != 2:
 
 try:
     with open(argv[1]) as file:
-        l = file.readline()
+        line = file.readline()
 
-        while l != "":
-            v = int(l.split('\n')[0])
-            factorize(v)
-            l = file.readline()
+        while line != "":
+            value = int(line.split('\n')[0])
+            factorize(value)
+            line = file.readline()
 except:
     pass
