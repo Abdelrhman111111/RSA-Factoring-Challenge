@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+from sys import argv
+
+
+def factorize(value):
+    x = 2
+
+    if v < 2:
+        return
+    print()
+    print(v, "<- value-bef")
+    while v % x:
+        x += 1
+    print("{:.0f}={:.0f}*{:.0f}".format(v, v / x, x))
+    print(v, "<- v-aft")
+    print()
+
+if len(argv) != 2:
+    exit()
+
+try:
+    with open(argv[1]) as file:
+        l = file.readline()
+
+        while l != "":
+            v = int(l.split('\n')[0])
+            factorize(v)
+            l = file.readline()
+except:
+    pass
